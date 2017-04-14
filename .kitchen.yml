@@ -1,0 +1,20 @@
+---
+driver:
+  name: vagrant
+
+verifier:
+  name: inspec
+
+provisioner:
+  name: chef_zero
+  config_rb:
+    log_level: debug
+
+platforms:
+  - name: debian-8.6
+
+suites:
+  - name: default
+    run_list:
+      - recipe[t3-mailhog::install]
+    attributes:
