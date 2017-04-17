@@ -1,0 +1,12 @@
+driver:
+  name: docker
+  use_sudo: false
+  run_command: /bin/systemd
+  cap_add:
+    - SYS_ADMIN
+    - NET_ADMIN # required for iptables
+  volume:
+    - /sys/fs/cgroup
+  provision_command:
+    - apt-get install -y net-tools cron
+    - mkdir -p /etc/network/if-pre-up.d/ # required for iptables cookbook
