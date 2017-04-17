@@ -1,3 +1,6 @@
+Usage
+-----
+
 - To _enable_ MailHog, add the `install` recipe to the run list of a node:
  
 ```
