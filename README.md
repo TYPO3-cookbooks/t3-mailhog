@@ -2,6 +2,8 @@
 
 Installs [MailHog](https://github.com/mailhog/MailHog) and redirects all outgoing port 25 traffic to it. Useful for test servers :-)
 
+[![Build Status master branch](https://chef-ci.typo3.org/job/TYPO3-cookbooks/job/t3-mailhog/branch/master/badge/icon)](https://chef-ci.typo3.org/job/TYPO3-cookbooks/job/t3-mailhog/branch/master/)
+
 # Requirements
 
 ## Platform:
@@ -31,11 +33,8 @@ Activates MailHog
 
 Deactivates MailHog
 
-Build Status
-------------
-
-Build status on our [CI server](https://chef-ci.typo3.org): [![Build Status master branch](https://chef-ci.typo3.org/job/TYPO3-cookbooks/job/mailhog/branch/master/badge/icon)](https://chef-ci.typo3.org/job/TYPO3-cookbooks/job/mailhog/branch/master/)
-
+Usage
+-----
 
 - To _enable_ MailHog, add the `install` recipe to the run list of a node:
 
