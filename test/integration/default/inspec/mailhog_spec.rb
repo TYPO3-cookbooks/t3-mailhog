@@ -7,6 +7,9 @@ control 'mailhog-1' do
   end
 
   describe iptables(table: 'nat') do
+    # before do
+    #   skip if file('/proc/self/cgroup').content.match %r{.*docker.*}
+    # end
     it { should have_rule('-A OUTPUT -p tcp -m tcp --dport 25 -j DNAT --to-destination 127.0.0.1:1025') }
   end
 end
